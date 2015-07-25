@@ -1,2 +1,4 @@
 # dom-constructor-comunication
 examples of combining non dom objects with dom objects
+### In the first example a label element is created inside the constructor to provide a door between the dom and the objects created by the constructor. A property is added to the label which can easily be changed by the dom or by functions created in the context of the objects because the label belongs to both. In practice a conditional statement should be used to check for the existence of a key matching the name of the proposed key to add in order to avoid problems by overwriting an existing property.
+### The second example uses bind to give the event listener in the dom the context of the object. This makes it easier to share the properties of the object with the dom, but care must be taken not to use 'this' expecting it to provide you with the context of the dom target. When doing this make that the event object is used to access the dom context from within the event handler.
